@@ -67,18 +67,43 @@ generateBtn.addEventListener("click", function() {
   const label4 = document.getElementById("label4").value;
   let url = `${selectedPageName} (${selectedLanguage.text}): https://go.expressvpn.com/c/${personalId}/${pageId}/16063`;
 
-  if (label1 !== "") {
+let isFirstParam = true;
+
+if (label1 !== "") {
+  if (isFirstParam) {
     url += `?subId1=${encodeURIComponent(label1)}`;
+    isFirstParam = false;
+  } else {
+    url += `&subId1=${encodeURIComponent(label1)}`;
   }
-  if (label2 !== "") {
+}
+
+if (label2 !== "") {
+  if (isFirstParam) {
+    url += `?subId2=${encodeURIComponent(label2)}`;
+    isFirstParam = false;
+  } else {
     url += `&subId2=${encodeURIComponent(label2)}`;
   }
-  if (label3 !== "") {
+}
+
+if (label3 !== "") {
+  if (isFirstParam) {
+    url += `?subId3=${encodeURIComponent(label3)}`;
+    isFirstParam = false;
+  } else {
     url += `&subId3=${encodeURIComponent(label3)}`;
   }
-  if (label4 !== "") {
+}
+
+if (label4 !== "") {
+  if (isFirstParam) {
+    url += `?sharedid=${encodeURIComponent(label4)}`;
+  } else {
     url += `&sharedid=${encodeURIComponent(label4)}`;
   }
+}
+  
 
   result.innerText = url;
 });
