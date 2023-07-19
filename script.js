@@ -67,7 +67,7 @@ generateBtn.addEventListener("click", function() {
   // Get the personal ID value and check if it's a numerical value
   const personalId = document.getElementById("personal-id").value;
   if (!isNumerical(personalId)) {
-    alert("Error: Personal ID must be a numerical value.");
+    alert("Error: Impact ID must be a numerical value.");
     return; // Stop URL generation if the personal ID is not valid
   }
 
