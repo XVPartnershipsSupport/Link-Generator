@@ -29,6 +29,12 @@ pageSelector.addEventListener("change", function() {
   updateLanguageSelectorAndGenerateUrl();
 });
 
+// Function to check if a value is numerical
+function isNumerical(value) {
+  return /^\d+$/.test(value);
+}
+
+// Modified function to update the language selector options and generate the URL
 function updateLanguageSelectorAndGenerateUrl() {
   // Clear the language selector options
   languageSelector.innerHTML = "";
@@ -58,7 +64,13 @@ languageSelector.addEventListener("change", function() {
 });
 
 generateBtn.addEventListener("click", function() {
+  // Get the personal ID value and check if it's a numerical value
   const personalId = document.getElementById("personal-id").value;
+  if (!isNumerical(personalId)) {
+    alert("Error: Personal ID must be a numerical value.");
+    return; // Stop URL generation if the personal ID is not valid
+  }
+
   const selectedLanguage = languageSelector.options[languageSelector.selectedIndex];
   const pageId = selectedLanguage.value;
   const label1 = document.getElementById("label1").value;
@@ -67,43 +79,42 @@ generateBtn.addEventListener("click", function() {
   const label4 = document.getElementById("label4").value;
   let url = `${selectedPageName} (${selectedLanguage.text}): https://go.expressvpn.com/c/${personalId}/${pageId}/16063`;
 
-let isFirstParam = true;
+  let isFirstParam = true;
 
-if (label1 !== "") {
-  if (isFirstParam) {
-    url += `?subId1=${encodeURIComponent(label1)}`;
-    isFirstParam = false;
-  } else {
-    url += `&subId1=${encodeURIComponent(label1)}`;
+  if (label1 !== "") {
+    if (isFirstParam) {
+      url += `?subId1=${encodeURIComponent(label1)}`;
+      isFirstParam = false;
+    } else {
+      url += `&subId1=${encodeURIComponent(label1)}`;
+    }
   }
-}
 
-if (label2 !== "") {
-  if (isFirstParam) {
-    url += `?subId2=${encodeURIComponent(label2)}`;
-    isFirstParam = false;
-  } else {
-    url += `&subId2=${encodeURIComponent(label2)}`;
+  if (label2 !== "") {
+    if (isFirstParam) {
+      url += `?subId2=${encodeURIComponent(label2)}`;
+      isFirstParam = false;
+    } else {
+      url += `&subId2=${encodeURIComponent(label2)}`;
+    }
   }
-}
 
-if (label3 !== "") {
-  if (isFirstParam) {
-    url += `?subId3=${encodeURIComponent(label3)}`;
-    isFirstParam = false;
-  } else {
-    url += `&subId3=${encodeURIComponent(label3)}`;
+  if (label3 !== "") {
+    if (isFirstParam) {
+      url += `?subId3=${encodeURIComponent(label3)}`;
+      isFirstParam = false;
+    } else {
+      url += `&subId3=${encodeURIComponent(label3)}`;
+    }
   }
-}
 
-if (label4 !== "") {
-  if (isFirstParam) {
-    url += `?sharedid=${encodeURIComponent(label4)}`;
-  } else {
-    url += `&sharedid=${encodeURIComponent(label4)}`;
+  if (label4 !== "") {
+    if (isFirstParam) {
+      url += `?sharedid=${encodeURIComponent(label4)}`;
+    } else {
+      url += `&sharedid=${encodeURIComponent(label4)}`;
+    }
   }
-}
-  
 
   result.innerText = url;
 });
@@ -122,4 +133,3 @@ function copyToClipboard() {
     alert("URL copied to clipboard: " + url);
   }
 }
-

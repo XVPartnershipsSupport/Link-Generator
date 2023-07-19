@@ -13,7 +13,7 @@
 		<div class="grid-container">
 			<div class="grid">
 				<div class="item item-1">
-					<label class="labels" for="personal-id"><span class="greenBG">1</span> Enter your Impact ID:</label> 
+					<label class="labels" for="personal-id"><span class="greenBG">1</span> Enter your Impact ID number:</label> 
 					<input class="inputFields" type="text" id="personal-id" name="personal-id"><br><br>
 					<label class="labels" for="page-selector"><span class="greenBG">2</span> Select a page:</label>
 					<select class="selectFields" id="page-selector" name="page-selector"></select><br><br>
@@ -42,7 +42,7 @@
 				<div class="item item-2">
 					<p id="instructions"><b>How to use</b></p>
 					<ol id="instructionSteps">
-						<li> Enter your Impact ID (found in your Impact Dashboard by clicking on your account name).</li><br>
+						<li> Enter your Impact ID number (found in your Impact Dashboard by clicking on your account name).</li><br>
 						<li> Choose a Landing Page from the list. Pages with “*” are recommended.</li><br>
 						<li> Pick a language for the Landing Page.</li><br>
 						<li> Add parameters like SharedID, SubID 1, SubID 2, and SubID 3  to get more details about the click’s origin from specific sources like articles or CTAs.</li>
@@ -50,16 +50,16 @@
 					<p><b>The link should have the following structure:</b></p>
 					<ul>
 						<li>Example with no tracking parameters: <span class="baseRedirectLink">https://go.expressvpn.com/c/</span><span class=
-							"personalID">YourPersonalImpactID</span><span class="landingPageID">/LandingPageID/</span><span class="xvID">16063</span></li>
+							"personalID">YourPersonalImpactID number</span><span class="landingPageID">/LandingPageID/</span><span class="xvID">16063</span></li>
 						<li>Example with tracking parameters: <span class="baseRedirectLink">https://go.expressvpn.com/c/</span><span class=
-							"personalID">YourPersonalImpactID</span><span class="landingPageID">/LandingPageID/</span><span class="xvID">16063</span><span class="subID">?subId1=Streaming&subId2=Banner</span></li>
+							"personalID">YourPersonalImpactID number</span><span class="landingPageID">/LandingPageID number/</span><span class="xvID">16063</span><span class="subID">?subId1=Streaming&subId2=Banner</span></li>
 						<li>Please check if the link leads to the desired landing page.</li>	
 					</ul>
 					<p><b>Link section explanation:</b></p>
 					<p>
 						<span class="map baseRedirectLink">Base redirect url</span>, 
-						<span class="map personalID">Your Impact ID</span>, 
-						<span class="map landingPageID">Landing Page ID - Every landing page on Impact has its own, unique identifier number.</span>, 
+						<span class="map personalID">Your Impact ID number</span>, 
+						<span class="map landingPageID">Landing Page ID number - Every landing page on Impact has its own, unique identifier number.</span>, 
 						<span class="map xvID">Advertiser ID - This number won’t change, it is ExpressVPN ID.</span>, 
 						<span class="map subID">Additional Parameters (SubID 1, SubID 2, SubID 3 and Shared ID)</span><br>
 
@@ -69,7 +69,7 @@
 			<section class="resultContainer">
 				<p id="result">Please ener your Impact ID and select the desired Landing page and language</p><button id="copy-btn" type="button" onclick="copyToClipboard()">Copy</button>
 			</section>
-			<p id="copy">v2.0.5</p>
+			<p id="copy">v2.0.6</p>
 		</div>
 		</div>
 		<script src="script.js"></script>
