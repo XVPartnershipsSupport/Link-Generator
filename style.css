@@ -175,3 +175,18 @@ button:active{
 #copy{
   text-align: center;
 }
+
+.notice{
+  text-align: center;
+  /*background-color: #ff5277;*/
+}
+
+.notice a{
+  color: #0F866C;
+}
+
+.notice_text{
+  padding: 10px;
+  background-color: rgba(255, 82, 119, .35);#ff5277;
+  border-radius: 14px;
+}
