@@ -189,3 +189,8 @@ button:active{
   background-color: rgba(255, 82, 119, .35);#ff5277;
   border-radius: 14px;
 }
+
+.notice_format{
+  padding: 10px;
+  border: solid, 1px, #ff5277;
+}
