@@ -5,6 +5,8 @@ body{
   line-height: 20px;
 }
 
+/*color: #F15A3B*/
+
 input, select{
   outline: none !important;
   padding: 4px;
@@ -22,7 +24,7 @@ select option{
 input:focus, select:focus{
   outline: none !important;
   border-width: 2px;
-  border-color: #0F866C;
+  border-color: #F15A3B;
 }
 
 ol {
@@ -38,14 +40,14 @@ ol li {
 
 ol li::before {
   content: counter(my-counter) "";
-  background-color: #0F866C;
+  background-color: #F15A3B;
   color: white;
   border-radius: 12px;
   padding: 2px 6px;
 }
 
 .greenBG{
-  background-color: #0F866C;
+  background-color: #F15A3B;
   color: white;
   border-radius: 12px;
   padding: 4px 8px;
@@ -121,7 +123,7 @@ background-color:rgba(214, 201, 150, .45);
   border-style: solid;
   border-width: 4px;
   border-radius: 12px;
-  border-color: #0F866C;
+  border-color: #F15A3B;
 }
 
 #instructions{
@@ -140,7 +142,7 @@ input, select{
 
 button{
   outline: none !important;
-  background-color: #0F866C;
+  background-color: #F15A3B;
   color: white;
   border-width: 0px;
   border-radius: 8px;
@@ -151,17 +153,17 @@ button{
 }
 
 button:hover{
-  background-color: #085c4a;
+  background-color: #A33D28;
   box-shadow: 0px 0px 8px 4px rgba(15, 134, 108, 0.2);
 }
 
 button:focus{
   border-width: 2px;
-  border-color: #0F866C;
+  border-color: #A33D28;
 }
 
 button:active{
-  background-color: #064033;
+  background-color: #A33D28;
 }
 
 #generate-btn{
