@@ -90,22 +90,32 @@ ol li::before {
 
 .baseRedirectLink{
 background-color:rgba(158, 222, 146, .45);
+border-radius: 8px;
+padding: 4px;
 }
 
 .personalID{
 background-color:rgba(146, 207, 222, .45);
+border-radius: 8px;
+padding: 4px;
 }
 
 .landingPageID{
 background-color:rgba(162, 146, 222, .45);
+border-radius: 8px;
+padding: 4px;
 }
 
 .xvID{
 background-color:rgba(222, 159, 146, .45);
+border-radius: 8px;
+padding: 4px;
 }
 
 .subID{
 background-color:rgba(214, 201, 150, .45);
+border-radius: 8px;
+padding: 4px;
 }
 
 .map {
